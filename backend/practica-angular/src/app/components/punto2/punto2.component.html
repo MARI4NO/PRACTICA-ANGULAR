@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-img-overlay text-center text-dark ">
+                <h5 class="card-title">{{palabraOriginal}}</h5>
+                <h5 class="card-title">{{palabraMostrar}}</h5>
+                <p class="card-text">{{vidas+1}}</p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<!--  -------------------LETRAS ----------------  -->
+<div class="container">
+    <br><br>
+    
+    <h3>INGRESE UNA LETRA</h3>
+    <button (click)="ingresarLetra('A')" type="button" class="btn btn-outline-success" >A</button>
+    <button (click)="ingresarLetra('B')" type="button" class="btn btn-outline-success" >B</button>
+    <button (click)="ingresarLetra('C')" type="button" class="btn btn-outline-success" >C</button>
+    <button (click)="ingresarLetra('D')" type="button" class="btn btn-outline-success" >D</button>
+    <button (click)="ingresarLetra('E')" type="button" class="btn btn-outline-success" >E</button>
+    <button (click)="ingresarLetra('F')" type="button" class="btn btn-outline-success" >F</button>
+    <button (click)="ingresarLetra('G')" type="button" class="btn btn-outline-success" >G</button>
+    <button (click)="ingresarLetra('H')" type="button" class="btn btn-outline-success" >H</button>
+    <button (click)="ingresarLetra('I')" type="button" class="btn btn-outline-success" >I</button>
+    <button (click)="ingresarLetra('J')" type="button" class="btn btn-outline-success" >J</button>
+    <button (click)="ingresarLetra('K')" type="button" class="btn btn-outline-success" >K</button>
+    <button (click)="ingresarLetra('L')" type="button" class="btn btn-outline-success" >L</button>
+    <button (click)="ingresarLetra('M')" type="button" class="btn btn-outline-success" >M</button>
+    <button (click)="ingresarLetra('N')" type="button" class="btn btn-outline-success" >N</button>
+    <button (click)="ingresarLetra('O')" type="button" class="btn btn-outline-success" >O</button>
+    <button (click)="ingresarLetra('P')" type="button" class="btn btn-outline-success" >P</button>
+    <button (click)="ingresarLetra('Q')" type="button" class="btn btn-outline-success" >Q</button>
+    <button (click)="ingresarLetra('R')" type="button" class="btn btn-outline-success" >R</button>
+    <button (click)="ingresarLetra('S')" type="button" class="btn btn-outline-success" >S</button>
+    <button (click)="ingresarLetra('T')" type="button" class="btn btn-outline-success" >T</button>
+    <button (click)="ingresarLetra('U')" type="button" class="btn btn-outline-success" >U</button>
+    <button (click)="ingresarLetra('V')" type="button" class="btn btn-outline-success" >V</button>
+    <button (click)="ingresarLetra('W')" type="button" class="btn btn-outline-success" >W</button>
+    <button (click)="ingresarLetra('X')" type="button" class="btn btn-outline-success" >X</button>
+    <button (click)="ingresarLetra('Y')" type="button" class="btn btn-outline-success" >Y</button>
+    <button (click)="ingresarLetra('Z')" type="button" class="btn btn-outline-success" >Z</button>
+    <!--<button (click)="guardarRegistro()" type="submit" class="btn btn-primary">Guardar Registro</button>-->
+</div>
+
+
+<!--  -------------------- MODAL ---------------- -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="mostrar">
+    Controlar Resultado 
+</button>
+    <p *ngIf="mostrar2">PRUEBAAAA</p> 
+    <p>*ngIf="mostrar" {{mostrar}}  *ngIf="!mostrar"</p>
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fin del Juego</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+            {{estadoJue}} {{palabraOriginal}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Jugando</button>
+          <a href="punto2" class="btn btn-primary">Salir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 

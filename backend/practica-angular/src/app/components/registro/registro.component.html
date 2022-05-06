@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{tituloform}}</h5>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="idusername" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="idusername" [(ngModel)]="usuario.username"
+                            name="usuario">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="idemail" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" id="idemail" aria-describedby="emailHelp"
+                            [(ngModel)]="usuario.email" name="email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idpassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="idpassword" [(ngModel)]="usuario.password"
+                            name="password" [disabled]="!cargapassword">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1"
+                        [(ngModel)]="cargapassword" name ="cargarpassword">
+                        <label class="form-check-label" for="exampleCheck1">Cargar password</label>
+                        <!--expresiones se pueden modificar pero solo en la vista pero no en el modelo-->
+                        <div>Longitud de la password: {{usuario.password.length}}</div>
+                    </div>
+                    <button (click)="guardarRegistro()" type="submit" class="btn btn-primary">Guardar Registro</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table class="table caption-top">
+            <caption>List of users</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usu of usuarios">
+                    
+                    <td>{{usu.username}}</td>
+                    <td>{{usu.email}}</td>
+                    <td>{{usu.password}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

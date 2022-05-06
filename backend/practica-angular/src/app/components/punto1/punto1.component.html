@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card h-auto ">
+            <img src="assets/{{noticia.img}}" class="card-img-top" alt="...">
+            <div class="card-img-overlay text-center text-light ">
+                <h5 class="card-title">{{noticia.titulo}}</h5>
+                <p class="card-text">{{noticia.detalle}}</p>
+                <a href="#" class="link-success">leer mas...</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-4 offset-4">
+        <button (click)="anterior()" class="btn btn-outline-primary">Anterior</button>
+        <button (click)="siguiente()" class="btn btn-outline-success">Siguiente</button>
+    </div>
+
+</div>
